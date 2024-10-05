@@ -1,10 +1,9 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
 Console.WriteLine("Hello, World!");
-
-// Tableau pour stocker les fruits (maximum 5 fruits)
+// Tableau pour stocker les fruits (max 5 fruits)
         string[] panier = new string[5];
-        int compteurFruits = 0; // Compteur pour le nombre de fruits dans le panier
+        int compteurFruits = 0; // Le Compteur pour le nombre de fruits dans le panier
         string choix;
 
         do
@@ -16,7 +15,7 @@ Console.WriteLine("Hello, World!");
             Console.WriteLine("3. Afficher le panier");
             Console.WriteLine("4. Rechercher un fruit");
             Console.WriteLine("5. Quitter");
-            Console.Write("Choisissez une option (1-5) : ");
+            Console.Write("Choisissez une option : ");
             choix = Console.ReadLine();
 
             switch (choix)
@@ -28,7 +27,7 @@ Console.WriteLine("Hello, World!");
                         Console.Write("Entrez le nom du fruit à ajouter : ");
                         string fruit = Console.ReadLine();
                         
-                        // Vérification des doublons
+                        // Vérifier les doublons
                         if (Array.Exists(panier, f => f == fruit))
                         {
                             Console.WriteLine("Erreur : Le fruit est déjà dans le panier !");
@@ -42,7 +41,7 @@ Console.WriteLine("Hello, World!");
                     }
                     else
                     {
-                        Console.WriteLine("Erreur : Le panier est plein (5 fruits maximum) !");
+                        Console.WriteLine("Erreur : Le panier est plein (5 fruits max) !");
                     }
                     break;
 
@@ -118,11 +117,11 @@ Console.WriteLine("Hello, World!");
 
                 case "5":
                     // Quitter
-                    Console.WriteLine("Merci d'avoir joué !");
+                    Console.WriteLine(" fin du jeu !");
                     break;
 
                 default:
-                    Console.WriteLine("Erreur : Option non valide, veuillez réessayer.");
+                    Console.WriteLine("Erreur :  veuillez réessayer.");
                     break;
             }
 
